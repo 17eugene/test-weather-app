@@ -1,0 +1,60 @@
+.cardDetailContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContainer {
+  width: 25%;
+  text-align: center;
+  padding: 40px;
+  border: 3px solid rgb(113, 108, 108);
+  border-radius: 15px;
+  box-shadow: 2px 3px 8px rgba(100, 120, 90, 0.7),
+    4px 8px 15px rgba(137, 172, 119, 0.7);
+  background: linear-gradient(
+    to bottom,
+    rgb(221, 247, 223),
+    rgb(152, 245, 242)
+  );
+}
+
+.cardTitle {
+  font-size: 30px;
+  margin-top: 0;
+  font-weight: 900;
+}
+
+.cardIcon {
+  width: 120px;
+  height: 120px;
+}
+
+.weather,
+.currentTemp {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: rgb(159, 154, 154);
+}
+
+.feelsLikeTemp,
+.wind {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: rgb(159, 154, 154);
+}
+
+.sunActivityBlock {
+  margin-top: 30px;
+  color: rgb(159, 154, 154);
+  font-size: 18px;
+}
+
+.sunrise,
+.sunset {
+  margin: 0;
+  margin-bottom: 10px;
+}

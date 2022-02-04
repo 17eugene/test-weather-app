@@ -1,0 +1,109 @@
+a {
+  text-decoration: none;
+}
+/********************card lisr*****************/
+.cardList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.cardListItem {
+  margin-right: 35px;
+  margin-bottom: 20px;
+}
+/*********************************************/
+
+/************************update button**************/
+.updateBtn {
+  padding: 7px;
+  width: 100%;
+  color: rgb(235, 241, 241);
+  font-weight: 700;
+  background-color: rgb(81, 81, 191);
+  outline: none;
+  border: 2px solid #eee;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 300ms linear;
+}
+
+.updateBtn:hover {
+  background-color: rgba(80, 161, 243, 0.238);
+  color: rgb(81, 81, 191);
+  font-weight: 700;
+}
+/*************************************************/
+
+/********************** close button  ******************/
+.closeBtn {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 3px;
+  border: 2px solid rgba(81, 162, 27, 0.3);
+  border-radius: 50%;
+  opacity: 0;
+  color: rgb(99, 99, 100);
+  cursor: pointer;
+  transition: all 100ms linear;
+}
+
+.closeBtn:hover {
+  color: rgb(15, 15, 15);
+  border: 2px solid rgba(81, 162, 27, 0.8);
+  transform: scale(1.1);
+}
+
+.cardContainer:hover .closeBtn {
+  opacity: 1;
+}
+/********************************************************/
+
+/*********************card*******************/
+.cardContainer {
+  width: 215px;
+  padding: 8px 15px 25px 15px;
+  text-align: center;
+  border: 2px solid #eee;
+  box-shadow: 2px 2px 8px rgb(135, 88, 88);
+  background-color: rgb(221, 225, 222);
+  transition: transform 200ms linear;
+  margin-top: 2px;
+}
+
+.cardContainer:hover {
+  transform: scale(1.02);
+}
+
+.cardTitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-size: 26px;
+  color: rgb(54, 91, 54);
+}
+
+.cardIcon {
+  height: 120px;
+  width: 120px;
+}
+
+.weather {
+  color: rgb(117, 118, 117);
+  font-size: 16px;
+  margin-top: 0;
+  font-weight: 700;
+}
+
+.currentTemp {
+  color: rgba(88, 90, 88, 0.4);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+/********************************************/
