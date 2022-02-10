@@ -1,7 +1,6 @@
-import s from "./Card.module.css";
-
 function Card({
   name,
+  country,
   temp,
   feels_like,
   sunrise_time,
@@ -11,31 +10,32 @@ function Card({
   wind,
   className,
   closeBtn,
+  getTempHandler,
 }) {
   return (
-    <div className={className.cardContainer}>
+    <div className={className.cardContainer} onClick={getTempHandler}>
       {closeBtn && <div>{closeBtn}</div>}
-      <h3 className={className.cardTitle}>{name}</h3>
-      <div className={s.cardIconWrapper}>
+      <h3 className={className.cardTitle}>
+        {name}, {country}
+      </h3>
+      <div>
         <img className={className.cardIcon} src={iconURL} alt={name} />
       </div>
       <p className={className.weather}>{weather}</p>
-      <div className={s.tempBlock}>
+      <div>
         <p className={className.currentTemp}>
           {temp} <span>&deg;C</span>
         </p>
 
         {feels_like && (
           <p className={className.feelsLikeTemp}>
-            Feels like{" "}
-            <span className={s.feelsLikeTempValue}>{feels_like}</span>{" "}
-            <span className={s.feelsLikeTempMeasure}>&deg;C</span>
+            Feels like <span>{feels_like}</span> <span>&deg;C</span>
           </p>
         )}
       </div>
       {wind && (
         <p className={className.wind}>
-          Wind speed: <span className={s.windSpeed}>{wind} m/s</span>
+          Wind speed: <span>{wind} m/s</span>
         </p>
       )}
 

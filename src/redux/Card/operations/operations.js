@@ -10,7 +10,7 @@ const addCity = (cityName) => async (dispatch) => {
 
   try {
     const response = await axios.get(
-      `${baseURL}/?q=${cityName}&appid=${API_KEY}`
+      `${baseURL}/weather/?q=${cityName}&appid=${API_KEY}`
     );
     dispatch(actions.addCardSuccess(response.data));
   } catch (error) {
@@ -23,7 +23,7 @@ const getCityToUpdate = (cityName) => async (dispatch) => {
 
   try {
     const response = await axios.get(
-      `${baseURL}/?q=${cityName}&appid=${API_KEY}`
+      `${baseURL}/weather/?q=${cityName}&appid=${API_KEY}`
     );
     dispatch(actions.updateCardSuccess(response.data));
   } catch (error) {
@@ -36,7 +36,7 @@ const getCityToDelete = (cityName) => async (dispatch) => {
 
   try {
     const response = await axios.get(
-      `${baseURL}/?q=${cityName}&appid=${API_KEY}`
+      `${baseURL}/weather/?q=${cityName}&appid=${API_KEY}`
     );
     dispatch(actions.deleteCardSuccess(response.data));
   } catch (error) {

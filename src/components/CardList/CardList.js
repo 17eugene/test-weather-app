@@ -13,7 +13,7 @@ import CloseBtn from "../CloseBtn/CloseBtn";
 
 import s from "./CardList.module.css";
 
-function CardList({ onUpdBtn, onDeleteBtn }) {
+function CardList({ onUpdBtn, onDeleteBtn, getTempHandler }) {
   const cards = useSelector(getCards);
   const { pathname } = useLocation();
 
@@ -29,7 +29,7 @@ function CardList({ onUpdBtn, onDeleteBtn }) {
     <div className={s.cardListContainer}>
       <ul className={s.cardList}>
         {cards.length > 0 &&
-          cards.map(({ id, name, main, weather }) => (
+          cards.map(({ id, name, main, sys, weather, coord }) => (
             <li className={s.cardListItem} key={id}>
               <SubmitBtn
                 onClick={() => submitUpdate(name)}
@@ -39,6 +39,9 @@ function CardList({ onUpdBtn, onDeleteBtn }) {
               </SubmitBtn>
               <Link onClick={handleLinkClick} to={`${pathname}${name}`}>
                 <Card
+                  getTempHandler={() =>
+                    getTempHandler({ lat: coord?.lat, lon: coord?.lon })
+                  }
                   closeBtn={
                     <CloseBtn
                       deleteCard={() => deleteCard(name)}
@@ -47,7 +50,8 @@ function CardList({ onUpdBtn, onDeleteBtn }) {
                   }
                   className={s}
                   name={name}
-                  temp={convertTemperature(main.temp)}
+                  country={sys?.country}
+                  temp={convertTemperature(main?.temp)}
                   weather={weather[0].main}
                   iconURL={`${iconURL}/${weather[0].icon}@2x.png`}
                 ></Card>

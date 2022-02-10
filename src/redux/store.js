@@ -7,6 +7,7 @@ import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
 import cardsReducer from "./Card/reducer/reducer";
+import temperatureReducer from "./Temperature/reducer/reducer";
 
 const persistConfig = {
   key: "cities",
@@ -15,6 +16,7 @@ const persistConfig = {
 
 const rootReducer = {
   cards: cardsReducer,
+  temperature: temperatureReducer,
 };
 
 const persistedReducer = persistReducer(

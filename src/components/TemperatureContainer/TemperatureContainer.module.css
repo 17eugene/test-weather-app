@@ -1,0 +1,13 @@
+.tempCardContainer {
+  margin-top: 20px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tempCardList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

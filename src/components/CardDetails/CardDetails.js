@@ -15,7 +15,7 @@ function CardDetails() {
   const { name } = useParams();
 
   useEffect(() => {
-    fetch(`${baseURL}/?q=${name}&appid=${API_KEY}`)
+    fetch(`${baseURL}/weather/?q=${name}&appid=${API_KEY}`)
       .then((response) => response.json())
       .then(setCard);
   }, [name]);
@@ -25,7 +25,8 @@ function CardDetails() {
       {card && (
         <Card
           className={s}
-          name={card.name}
+          name={card?.name}
+          country={card?.sys?.country}
           temp={convertTemperature(card?.main?.temp)}
           feels_like={convertTemperature(card?.main?.feels_like)}
           sunrise_time={convertTime(card?.sys?.sunrise)}

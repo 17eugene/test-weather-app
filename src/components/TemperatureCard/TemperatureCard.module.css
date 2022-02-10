@@ -1,0 +1,19 @@
+.tempInfoCard {
+  display: inline-block;
+}
+
+.time {
+  font-size: 10px;
+  margin: 0;
+  margin-bottom: 7px;
+  text-align: center;
+}
+
+.temp {
+  background-color: rgb(247, 248, 175);
+  width: fit-content;
+  padding: 0 5px;
+  box-shadow: 1px 1px 3px rgba(75, 140, 30, 0.6);
+  font-size: 16px;
+  margin: 0;
+}
